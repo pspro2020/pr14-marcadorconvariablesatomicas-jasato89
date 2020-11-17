@@ -7,7 +7,7 @@ public class Main {
         Thread[] threads = new Thread[3];
         Counter counter = new Counter();
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < threads.length; i++) {
             threads[i] = new Thread(new Dice(counter, 10000));
             threads[i].start();
             try {
